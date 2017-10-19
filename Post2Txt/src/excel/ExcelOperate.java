@@ -30,8 +30,8 @@ public class ExcelOperate {
 
     public static void main(String[] args) throws Exception {
 
-    //  清空 输出路径下(中文分词模块)已有数据，以保证本次结果纯净        中文语料
-          File folderCN = new File("G:/Workspace/SentimentNew/data_trains");  // 此路径在上级调用project内
+    //  娓呯┖ 杈撳嚭璺緞涓�涓枃鍒嗚瘝妯″潡)宸叉湁鏁版嵁锛屼互淇濊瘉鏈缁撴灉绾噣        涓枃璇枡  什么编码？ 编码
+          File folderCN = new File("G:/Workspace/SentimentNew/data_trains");  // 姝よ矾寰勫湪涓婄骇璋冪敤project鍐�
 		  File[] filesCN = folderCN.listFiles();
 		  for (int i=0;i<filesCN.length;i++){
 		    File fileexist = filesCN[i];
@@ -41,7 +41,7 @@ public class ExcelOperate {
 		  }
 	    
 
-     //  清空 输出路径下已有数据，以保证本次结果纯净     英文语料时，不需要做分词，因而数据不去分词模块，直接进入LDA分析模块
+     //  娓呯┖ 杈撳嚭璺緞涓嬪凡鏈夋暟鎹紝浠ヤ繚璇佹湰娆＄粨鏋滅函鍑�    鑻辨枃璇枡鏃讹紝涓嶉渶瑕佸仛鍒嗚瘝锛屽洜鑰屾暟鎹笉鍘诲垎璇嶆ā鍧楋紝鐩存帴杩涘叆LDA鍒嗘瀽妯″潡
 	   /* 	File folder = new File("E:/WorkSpace_2014/NLPLDAYL/testdata/InputEN");
 			  File[] files = folder.listFiles();
 			  for (int i=0;i<files.length;i++){
@@ -51,14 +51,14 @@ public class ExcelOperate {
 			    }
 			  }	 */ 
 		  
-   //  读入 Excel 处理成  txt  ，这里可以改为批处理 
-	//中文部分
-	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\Olym.xls");  //具体到 待抽取的文件
-	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\kuke.xls");  //具体到 待抽取的文件 
-	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\engage.xls");  //具体到 待抽取的文件
-	     File file = new File("G:\\Workspace\\Post2Txt\\data\\post.xls");   // 输入的待处理的Excel 文档
+   //  璇诲叆 Excel 澶勭悊鎴� txt  锛岃繖閲屽彲浠ユ敼涓烘壒澶勭悊 
+	//涓枃閮ㄥ垎
+	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\Olym.xls");  //鍏蜂綋鍒�寰呮娊鍙栫殑鏂囦欢
+	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\kuke.xls");  //鍏蜂綋鍒�寰呮娊鍙栫殑鏂囦欢 
+	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\engage.xls");  //鍏蜂綋鍒�寰呮娊鍙栫殑鏂囦欢
+	     File file = new File("G:\\Workspace\\Post2Txt\\data\\post.xls");   // 杈撳叆鐨勫緟澶勭悊鐨凟xcel 鏂囨。
 	     
-	 //英文部分    
+	 //鑻辨枃閮ㄥ垎    
 	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\arttalk.xls");
 	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\twitter_king_post.xls");
 	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\twitter_happiness.xls");
@@ -71,14 +71,14 @@ public class ExcelOperate {
        for(int i=0;i<rowLength;i++) {
 
            for(int j=0;j<result[i].length;j++) {
-        	   if (j==4)             // 处理xls文档的第j列
+        	   if (j==4)             // 澶勭悊xls鏂囨。鐨勭j鍒�
         	  { 
 	        	  System.out.print(result[i][j]+"\t\t");
-	        	  //此处中文、英文语料的处理结果分开，与前呼应
-	             // String filepath="E:/WorkSpace_2014/CNWordsParse/Inputdata/Auto/"+Integer.toString(i);  //中文语料时 该步骤的输出路径   作为分词的输入
-	            //  String filepath="E:/WorkSpace_2014/NLPLDAYL/testdata/InputEN/"+Integer.toString(i);  //英文语料时 该步骤的输出路径   
+	        	  //姝ゅ涓枃銆佽嫳鏂囪鏂欑殑澶勭悊缁撴灉鍒嗗紑锛屼笌鍓嶅懠搴�
+	             // String filepath="E:/WorkSpace_2014/CNWordsParse/Inputdata/Auto/"+Integer.toString(i);  //涓枃璇枡鏃�璇ユ楠ょ殑杈撳嚭璺緞   浣滀负鍒嗚瘝鐨勮緭鍏�
+	            //  String filepath="E:/WorkSpace_2014/NLPLDAYL/testdata/InputEN/"+Integer.toString(i);  //鑻辨枃璇枡鏃�璇ユ楠ょ殑杈撳嚭璺緞   
 	             
-	        	  String filepath="G:/Workspace/SentimentNew/data_trains/"+Integer.toString(i);  //英文语料时 该步骤的输出路径  
+	        	  String filepath="G:/Workspace/SentimentNew/data_trains/"+Integer.toString(i);  //鑻辨枃璇枡鏃�璇ユ楠ょ殑杈撳嚭璺緞  
 	        	  FileOutputStream fout=new FileOutputStream(filepath);
 	              OutputStreamWriter osw=new OutputStreamWriter(fout);
 	              osw.write(result[i][j]);
@@ -92,13 +92,13 @@ public class ExcelOperate {
 
     /**
 
-     * 读取Excel的内容，第一维数组存储的是一行中格列的值，二维数组存储的是多少个行
+     * 璇诲彇Excel鐨勫唴瀹癸紝绗竴缁存暟缁勫瓨鍌ㄧ殑鏄竴琛屼腑鏍煎垪鐨勫�锛屼簩缁存暟缁勫瓨鍌ㄧ殑鏄灏戜釜琛�
 
-     * @param file 读取数据的源Excel
+     * @param file 璇诲彇鏁版嵁鐨勬簮Excel
 
-     * @param ignoreRows 读取数据忽略的行数，比喻行头不需要读入 忽略的行数为1  
+     * @param ignoreRows 璇诲彇鏁版嵁蹇界暐鐨勮鏁帮紝姣斿柣琛屽ご涓嶉渶瑕佽鍏�蹇界暐鐨勮鏁颁负1  
 
-     * @return 读出的Excel中数据的内容
+     * @return 璇诲嚭鐨凟xcel涓暟鎹殑鍐呭
 
      * @throws FileNotFoundException
 
@@ -118,7 +118,7 @@ public class ExcelOperate {
 
               file));
 
-       // 打开HSSFWorkbook
+       // 鎵撳紑HSSFWorkbook
 
        POIFSFileSystem fs = new POIFSFileSystem(in);
 
@@ -130,7 +130,7 @@ public class ExcelOperate {
 
            HSSFSheet st = wb.getSheetAt(sheetIndex);
 
-           // 第一行为标题，不取     输入文件必须有 第一行 作为表头
+           // 绗竴琛屼负鏍囬锛屼笉鍙�    杈撳叆鏂囦欢蹇呴』鏈�绗竴琛�浣滀负琛ㄥご
 
            for (int rowIndex = ignoreRows; rowIndex <= st.getLastRowNum(); rowIndex++) {
 
@@ -164,7 +164,7 @@ public class ExcelOperate {
 
                   if (cell != null) {
 
-                     // 注意：一定要设成这个，否则可能会出现乱码
+                     // 娉ㄦ剰锛氫竴瀹氳璁炬垚杩欎釜锛屽惁鍒欏彲鑳戒細鍑虹幇涔辩爜
 
                      //cell.setEncoding(HSSFCell.ENCODING_UTF_16);
                 	 // cell.setEncoding(HSSFCell.ENCODING_GBK);
@@ -207,7 +207,7 @@ public class ExcelOperate {
 
                      case HSSFCell.CELL_TYPE_FORMULA:
 
-                         // 导入时如果为公式生成的数据则无值
+                         // 瀵煎叆鏃跺鏋滀负鍏紡鐢熸垚鐨勬暟鎹垯鏃犲�
 
                          if (!cell.getStringCellValue().equals("")) {
 
@@ -289,11 +289,11 @@ public class ExcelOperate {
 
     /**
 
-     * 去掉字符串右边的空格
+     * 鍘绘帀瀛楃涓插彸杈圭殑绌烘牸
 
-     * @param str 要处理的字符串
+     * @param str 瑕佸鐞嗙殑瀛楃涓�
 
-     * @return 处理后的字符串
+     * @return 澶勭悊鍚庣殑瀛楃涓�
 
      */
 
