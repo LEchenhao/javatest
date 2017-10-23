@@ -22,3 +22,13 @@ for (short columnIndex = 0; columnIndex <= row.getLastCellNum(); columnIndex++) 
            value = cell.getStringCellValue();
 
            break;
+           
+       case HSSFCell.CELL_TYPE_FORMULA:
+
+           // 导入时如果为公式生成的数据则无值
+
+           if (!cell.getStringCellValue().equals("")) {
+
+              value = cell.getStringCellValue();
+
+           } else {
