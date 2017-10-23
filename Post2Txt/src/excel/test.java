@@ -8,7 +8,7 @@ hah
 test
 
 
-       // 注意：一定要设成这个，否则可能会出现乱码
+       // 娉ㄦ剰锛氫竴瀹氳璁炬垚杩欎釜锛屽惁鍒欏彲鑳戒細鍑虹幇涔辩爜
 
        //cell.setEncoding(HSSFCell.ENCODING_UTF_16);
   	 // cell.setEncoding(HSSFCell.ENCODING_GBK);
@@ -23,7 +23,7 @@ test
            
        case HSSFCell.CELL_TYPE_FORMULA:
 
-           // 导入时如果为公式生成的数据则无值
+           // 瀵煎叆鏃跺鏋滀负鍏紡鐢熸垚鐨勬暟鎹垯鏃犲�
 
            if (!cell.getStringCellValue().equals("")) {
 
@@ -31,3 +31,4 @@ test
 
            } else {
 >>>>>>> branch 'master' of https://github.com/LEchenhao/javatest.git
+faafaf
