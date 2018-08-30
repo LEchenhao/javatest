@@ -30,8 +30,8 @@ public class ExcelOperate {
 
     public static void main(String[] args) throws Exception {
 
-    //  娓呯┖ 杈撳嚭璺緞涓�涓枃鍒嗚瘝妯″潡)宸叉湁鏁版嵁锛屼互淇濊瘉鏈缁撴灉绾噣        涓枃璇枡  什么编码？ 编码
-          File folderCN = new File("G:/Workspace/SentimentNew/data_trains");  // 姝よ矾寰勫湪涓婄骇璋冪敤project鍐�
+    //  濞撳懐鈹�鏉堟挸鍤捄顖氱窞娑擄拷娑擃厽鏋冮崚鍡氱槤濡�娼�瀹稿弶婀侀弫鐗堝祦閿涘奔浜掓穱婵婄槈閺堫剚顐肩紒鎾寸亯缁绢垰鍣�       娑擃厽鏋冪拠顓熸灐  浠�箞缂栫爜锛�缂栫爜
+          File folderCN = new File("G:/Workspace/SentimentNew/data_trains");  // 濮濄倛鐭惧鍕躬娑撳﹦楠囩拫鍐暏project閸愶拷
 		  File[] filesCN = folderCN.listFiles();
 		  for (int i=0;i<filesCN.length;i++){
 		    File fileexist = filesCN[i];
@@ -41,7 +41,7 @@ public class ExcelOperate {
 		  }
 	    
 
-     //  娓呯┖ 杈撳嚭璺緞涓嬪凡鏈夋暟鎹紝浠ヤ繚璇佹湰娆＄粨鏋滅函鍑�    鑻辨枃璇枡鏃讹紝涓嶉渶瑕佸仛鍒嗚瘝锛屽洜鑰屾暟鎹笉鍘诲垎璇嶆ā鍧楋紝鐩存帴杩涘叆LDA鍒嗘瀽妯″潡
+     //  濞撳懐鈹�鏉堟挸鍤捄顖氱窞娑撳鍑￠張澶嬫殶閹诡噯绱濇禒銉ょ箽鐠囦焦婀板▎锛勭波閺嬫粎鍑介崙锟�   閼昏鲸鏋冪拠顓熸灐閺冭绱濇稉宥夋付鐟曚礁浠涢崚鍡氱槤閿涘苯娲滈懓灞炬殶閹诡喕绗夐崢璇插瀻鐠囧秵膩閸ф绱濋惄瀛樺复鏉╂稑鍙哃DA閸掑棙鐎藉Ο鈥虫健
 	   /* 	File folder = new File("E:/WorkSpace_2014/NLPLDAYL/testdata/InputEN");
 			  File[] files = folder.listFiles();
 			  for (int i=0;i<files.length;i++){
@@ -51,14 +51,14 @@ public class ExcelOperate {
 			    }
 			  }	 */ 
 		  
-   //  璇诲叆 Excel 澶勭悊鎴� txt  锛岃繖閲屽彲浠ユ敼涓烘壒澶勭悊 
-	//涓枃閮ㄥ垎
-	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\Olym.xls");  //鍏蜂綋鍒�寰呮娊鍙栫殑鏂囦欢
-	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\kuke.xls");  //鍏蜂綋鍒�寰呮娊鍙栫殑鏂囦欢 
-	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\engage.xls");  //鍏蜂綋鍒�寰呮娊鍙栫殑鏂囦欢
-	     File file = new File("G:\\Workspace\\Post2Txt\\data\\post.xls");   // 杈撳叆鐨勫緟澶勭悊鐨凟xcel 鏂囨。
+   //  鐠囪鍙�Excel 婢跺嫮鎮婇幋锟�txt  閿涘矁绻栭柌灞藉讲娴犮儲鏁兼稉鐑樺婢跺嫮鎮�
+	//娑擃厽鏋冮柈銊ュ瀻
+	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\Olym.xls");  //閸忚渹缍嬮崚锟藉鍛▕閸欐牜娈戦弬鍥︽
+	   //File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\kuke.xls");  //閸忚渹缍嬮崚锟藉鍛▕閸欐牜娈戦弬鍥︽ 
+	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\engage.xls");  //閸忚渹缍嬮崚锟藉鍛▕閸欐牜娈戦弬鍥︽
+	     File file = new File("G:\\Workspace\\Post2Txt\\data\\post.xls");   // 鏉堟挸鍙嗛惃鍕窡婢跺嫮鎮婇惃鍑焫cel 閺傚洦銆�
 	     
-	 //鑻辨枃閮ㄥ垎    
+	 //閼昏鲸鏋冮柈銊ュ瀻    
 	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\arttalk.xls");
 	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\twitter_king_post.xls");
 	  // File file = new File("E:\\WorkSpace_2014\\Post2Txt\\data\\twitter_happiness.xls");
@@ -71,14 +71,13 @@ public class ExcelOperate {
        for(int i=0;i<rowLength;i++) {
 
            for(int j=0;j<result[i].length;j++) {
-        	   if (j==4)             // 澶勭悊xls鏂囨。鐨勭j鍒�
+        	   if (j==4)             // 婢跺嫮鎮妜ls閺傚洦銆傞惃鍕儑j閸掞拷
         	  { 
 	        	  System.out.print(result[i][j]+"\t\t");
-	        	  //姝ゅ涓枃銆佽嫳鏂囪鏂欑殑澶勭悊缁撴灉鍒嗗紑锛屼笌鍓嶅懠搴�
-	             // String filepath="E:/WorkSpace_2014/CNWordsParse/Inputdata/Auto/"+Integer.toString(i);  //涓枃璇枡鏃�璇ユ楠ょ殑杈撳嚭璺緞   浣滀负鍒嗚瘝鐨勮緭鍏�
-	            //  String filepath="E:/WorkSpace_2014/NLPLDAYL/testdata/InputEN/"+Integer.toString(i);  //鑻辨枃璇枡鏃�璇ユ楠ょ殑杈撳嚭璺緞   
+	        	  //濮濄倕顦╂稉顓熸瀮閵嗕浇瀚抽弬鍥嚔閺傛瑧娈戞径鍕倞缂佹挻鐏夐崚鍡楃磻閿涘奔绗岄崜宥呮嚑鎼达拷
+	             // String filepath="E:/WorkSpace_2014/CNWordsParse/Inputdata/Auto/"+Integer.toString(i);  //娑擃厽鏋冪拠顓熸灐閺冿拷鐠囥儲顒炴銈囨畱鏉堟挸鍤捄顖氱窞   娴ｆ粈璐熼崚鍡氱槤閻ㄥ嫯绶崗锟�	            //  String filepath="E:/WorkSpace_2014/NLPLDAYL/testdata/InputEN/"+Integer.toString(i);  //閼昏鲸鏋冪拠顓熸灐閺冿拷鐠囥儲顒炴銈囨畱鏉堟挸鍤捄顖氱窞   
 	             
-	        	  String filepath="G:/Workspace/SentimentNew/data_trains/"+Integer.toString(i);  //鑻辨枃璇枡鏃�璇ユ楠ょ殑杈撳嚭璺緞  
+	        	  String filepath="G:/Workspace/SentimentNew/data_trains/"+Integer.toString(i);  //閼昏鲸鏋冪拠顓熸灐閺冿拷鐠囥儲顒炴銈囨畱鏉堟挸鍤捄顖氱窞  
 	        	  FileOutputStream fout=new FileOutputStream(filepath);
 	              OutputStreamWriter osw=new OutputStreamWriter(fout);
 	              osw.write(result[i][j]);
@@ -92,13 +91,13 @@ public class ExcelOperate {
 
     /**
 
-     * 璇诲彇Excel鐨勫唴瀹癸紝绗竴缁存暟缁勫瓨鍌ㄧ殑鏄竴琛屼腑鏍煎垪鐨勫�锛屼簩缁存暟缁勫瓨鍌ㄧ殑鏄灏戜釜琛�
+     * 鐠囪褰嘐xcel閻ㄥ嫬鍞寸�鐧哥礉缁楊兛绔寸紒瀛樻殶缂佸嫬鐡ㄩ崒銊ф畱閺勵垯绔寸悰灞艰厬閺嶇厧鍨惃鍕拷閿涘奔绨╃紒瀛樻殶缂佸嫬鐡ㄩ崒銊ф畱閺勵垰顦跨亸鎴滈嚋鐞涳拷
 
-     * @param file 璇诲彇鏁版嵁鐨勬簮Excel
+     * @param file 鐠囪褰囬弫鐗堝祦閻ㄥ嫭绨瓻xcel
 
-     * @param ignoreRows 璇诲彇鏁版嵁蹇界暐鐨勮鏁帮紝姣斿柣琛屽ご涓嶉渶瑕佽鍏�蹇界暐鐨勮鏁颁负1  
+     * @param ignoreRows 鐠囪褰囬弫鐗堝祦韫囩晫鏆愰惃鍕攽閺佸府绱濆В鏂挎煟鐞涘苯銇旀稉宥夋付鐟曚浇顕伴崗锟借箛鐣屾殣閻ㄥ嫯顢戦弫棰佽礋1  
 
-     * @return 璇诲嚭鐨凟xcel涓暟鎹殑鍐呭
+     * @return 鐠囪鍤惃鍑焫cel娑擃厽鏆熼幑顔炬畱閸愬懎顔�
 
      * @throws FileNotFoundException
 
@@ -118,7 +117,7 @@ public class ExcelOperate {
 
               file));
 
-       // 鎵撳紑HSSFWorkbook
+       // 閹垫挸绱慔SSFWorkbook
 
        POIFSFileSystem fs = new POIFSFileSystem(in);
 
@@ -130,7 +129,7 @@ public class ExcelOperate {
 
            HSSFSheet st = wb.getSheetAt(sheetIndex);
 
-           // 绗竴琛屼负鏍囬锛屼笉鍙�    杈撳叆鏂囦欢蹇呴』鏈�绗竴琛�浣滀负琛ㄥご
+           // 缁楊兛绔寸悰灞艰礋閺嶅洭顣介敍灞肩瑝閸欙拷    鏉堟挸鍙嗛弬鍥︽韫囧懘銆忛張锟界粭顑跨鐞涳拷娴ｆ粈璐熺悰銊ャ仈
 
            for (int rowIndex = ignoreRows; rowIndex <= st.getLastRowNum(); rowIndex++) {
 
@@ -164,7 +163,7 @@ public class ExcelOperate {
 
                   if (cell != null) {
 
-                     // 娉ㄦ剰锛氫竴瀹氳璁炬垚杩欎釜锛屽惁鍒欏彲鑳戒細鍑虹幇涔辩爜
+                     // 濞夈劍鍓伴敍姘鐎规俺顩︾拋鐐灇鏉╂瑤閲滈敍灞芥儊閸掓瑥褰查懗鎴掔窗閸戣櫣骞囨稊杈╃垳
 
                      //cell.setEncoding(HSSFCell.ENCODING_UTF_16);
                 	 // cell.setEncoding(HSSFCell.ENCODING_GBK);
@@ -207,7 +206,7 @@ public class ExcelOperate {
 
                      case HSSFCell.CELL_TYPE_FORMULA:
 
-                         // 瀵煎叆鏃跺鏋滀负鍏紡鐢熸垚鐨勬暟鎹垯鏃犲�
+                         // 鐎电厧鍙嗛弮璺侯洤閺嬫粈璐熼崗顒�础閻㈢喐鍨氶惃鍕殶閹诡喖鍨弮鐘诧拷
 
                          if (!cell.getStringCellValue().equals("")) {
 
@@ -289,12 +288,10 @@ public class ExcelOperate {
 
     /**
 
-     * 鍘绘帀瀛楃涓插彸杈圭殑绌烘牸
+     * 閸樼粯甯��妤冾儊娑撴彃褰告潏鍦畱缁岀儤鐗�
 
-     * @param str 瑕佸鐞嗙殑瀛楃涓�
-
-     * @return 澶勭悊鍚庣殑瀛楃涓�
-
+     * @param str 鐟曚礁顦╅悶鍡欐畱鐎涙顑佹稉锟�
+     * @return 婢跺嫮鎮婇崥搴ｆ畱鐎涙顑佹稉锟�
      */
 
      public static String rightTrim(String str) {
