@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-testtest
-import
 
-=======
-import new
-hah
-test
+
+
 
 
        // 娉ㄦ剰锛氫竴瀹氳璁炬垚杩欎釜锛屽惁鍒欏彲鑳戒細鍑虹幇涔辩爜
